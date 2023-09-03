@@ -27,6 +27,17 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
   }
+
+  String dropdownvalue = 'Profile';
+      var items = [
+        'Profile',
+        'Settings',
+        'Account',
+        'Go Premium',
+        'Logout',
+      ];
+
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -35,38 +46,74 @@ class _MyAppState extends State<MyApp> {
         child: Column(
             children: [
 
+
               RaisedButton(
                 onPressed: (){print("onPressed");},
                 child: Text('Click me'),
                 color: Colors.blue,
               ),
+
+
               ElevatedButton(
                   onPressed: (){print("onPressed");},
                   child: Text('Click me')
               ),
+
+
               FlatButton(
                 onPressed: (){print("onPressed");},
                 child: Text('click me'),
               ),
+
+
               TextButton(
                 onPressed: (){print("onPressed");},
                 child: Text('Click me '),
               ),
+
+
               ElevatedButton.icon(
                 icon: Icon(Icons.account_circle),
                 onPressed: (){print("onPressed");},
                 label: Text('Click me'),
               ),
+
+
               IconButton(
                 icon: Icon(Icons.security),
                 onPressed: (){print("onPressed");},
               ),
 
+
               FloatingActionButton(
                 onPressed: (){print("onPressed");},
                 child: Text('Click'),
-              )
-            ]
+              ),
+
+
+              DropdownButton(
+                focusColor: Colors.green,
+                value: dropdownvalue,
+                icon: const Icon(Icons.keyboard_arrow_down),
+                items: items.map((String items) {
+                  return DropdownMenuItem(
+                    value: items,
+                    child: Text(
+                    items,
+                    style: const TextStyle(
+                    color: Colors.green,
+                      ),
+                     ),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                  setState(() {
+                  dropdownvalue = newValue!;
+                  });
+                },
+              ),
+
+    ]
         ),
       ),
     );
