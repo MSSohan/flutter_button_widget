@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'All Flutter Button Widget Example',
+    title: 'Flutter Button Widget',
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
