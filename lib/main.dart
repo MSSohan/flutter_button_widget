@@ -63,7 +63,7 @@ class _MyAppState extends State<MyApp> {
 
               TextButton(
                 onPressed: (){print("onPressed");},
-                child: const Text('Click me '),
+                child: const Text('Text Button '),
               ),
 
 
@@ -88,6 +88,17 @@ class _MyAppState extends State<MyApp> {
                     elevation: 12.0,
                     textStyle: const TextStyle(color: Colors.white)),
                 child: const Text('Elevated Button'),
+              ),
+
+
+              OutlinedButton(
+                child: const Text(
+                  "Outlined Button",
+                  style: TextStyle(
+                    color: Colors.green,
+                  ),
+                ),
+                onPressed: () {},
               ),
 
 
