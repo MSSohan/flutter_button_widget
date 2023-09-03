@@ -47,22 +47,9 @@ class _MyAppState extends State<MyApp> {
             children: [
 
 
-              RaisedButton(
-                onPressed: (){print("onPressed");},
-                child: const Text('Click me'),
-                color: Colors.blue,
-              ),
-
-
               ElevatedButton(
                   onPressed: (){print("onPressed");},
                   child: const Text('Click me')
-              ),
-
-
-              FlatButton(
-                onPressed: (){print("onPressed");},
-                child: const Text('click me'),
               ),
 
 
