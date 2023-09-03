@@ -47,15 +47,40 @@ class _MyAppState extends State<MyApp> {
             children: [
 
 
-              ElevatedButton(
-                  onPressed: (){print("onPressed");},
-                  child: const Text('Click me')
+              // Flat Button
+              TextButton(
+                onPressed: () {},
+                child: Container(
+                  color: Colors.orange,
+                  padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  child: const Text(
+                    'Flat Button',
+                    style: TextStyle(color: Colors.white, fontSize: 13.0),
+                  ),
+                ),
               ),
 
 
               TextButton(
                 onPressed: (){print("onPressed");},
                 child: const Text('Click me '),
+              ),
+
+
+              ElevatedButton(
+                  onPressed: (){print("onPressed");},
+                  child: const Text('Click me')
+              ),
+
+
+              // Raised Button
+              ElevatedButton(
+                onPressed: () {},
+                // style: ButtonStyle(elevation: MaterialStateProperty(12.0 )),
+                style: ElevatedButton.styleFrom(
+                    elevation: 12.0,
+                    textStyle: const TextStyle(color: Colors.white)),
+                child: const Text('Elevated Button'),
               ),
 
 
@@ -73,13 +98,15 @@ class _MyAppState extends State<MyApp> {
 
 
               FloatingActionButton(
-                onPressed: (){print("onPressed");},
-                child: const Text('Click'),
+                child: Icon(Icons.person),
+                backgroundColor: Colors.cyan,
+                foregroundColor: Colors.white,
+                onPressed: () {},
               ),
 
 
               DropdownButton(
-                focusColor: Colors.green,
+                focusColor: Colors.red,
                 value: dropdownvalue,
                 icon: const Icon(Icons.keyboard_arrow_down),
                 items: items.map((String items) {
