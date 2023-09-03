@@ -69,14 +69,14 @@ class _MyAppState extends State<MyApp> {
 
               ElevatedButton(
                   onPressed: (){print("onPressed");},
-                  child: const Text('Click me')
+                  child: const Text('Elevated Button')
               ),
 
 
               ElevatedButton.icon(
                 icon: const Icon(Icons.account_circle),
                 onPressed: (){print("onPressed");},
-                label: const Text('Click me'),
+                label: const Text('Elevated Button with Icon'),
               ),
 
 
@@ -87,7 +87,7 @@ class _MyAppState extends State<MyApp> {
                 style: ElevatedButton.styleFrom(
                     elevation: 12.0,
                     textStyle: const TextStyle(color: Colors.white)),
-                child: const Text('Elevated Button'),
+                child: const Text('Raised Button'),
               ),
 
 
@@ -126,7 +126,7 @@ class _MyAppState extends State<MyApp> {
                     child: Text(
                     items,
                     style: const TextStyle(
-                    color: Colors.purple,
+                    color: Colors.red,
                       ),
                      ),
                     );
