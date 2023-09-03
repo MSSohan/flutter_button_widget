@@ -3,12 +3,12 @@ import 'package:flutter/services.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Button Widget Example',
+    title: 'All Flutter Button Widget Example',
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
     home: Scaffold(
-      appBar: AppBar(title: const Text('Button Widget Example'),),
+      appBar: AppBar(title: const Text('Flutter Button Widget'),),
       backgroundColor: Colors.grey[300],
       body: MyApp(),
     ),
